@@ -1,0 +1,57 @@
+uptime
+uname --
+uname -a -- full OS info
+lscpu -- list of processors
+ls -l
+$PATH -- evironment variables
+echo $PATH -- prints variables
+CTRL+ALT+F3 -- enter command line interface, no gui.
+CTRL+ALT+F4 -- new cli session
+ALT+F2 -- return to GUI
+clear -- clears a screen
+man -k time -- searches for "time" commands
+man uptime -- shows uptime menual
+/any string -- searches for "string" in current manual
+info uptime -- another manual for commands
+whatis uptime -- short command description
+whereis uptime -- shows where the specified command is located in hard drive.
+locate -- the same as whereis command
+CTRL+C -- terminate command
+CTRL+Z -- sleep process, send a process to background
+ps -- reposrt a snapshot of the current processes
+fg -- return to sleeping process
+pwd -- print name of curren/working directory
+cd ~ OR cd -- go to home directory
+more -- read file by pages
+less -- like man viewer, you can search for a string
+touch -- create a file or change it's last edit time of a file or directory
+cp -- copy files
+cp hello*.* Dir2
+cp file?.txt Dir2 -v
+rm -- remove files of directories
+ln -s /home/denis/Documents/Dir4 MyLinkToDir4 --  make symbolic links between files. Specify a full path to file or dir!
+ln file1.txt file1dup.txt -- creates copy of file1.txt.
+find /home -name "file*.txt" -- finds files
+wc -- print newline, word, and byte counts for each file
+sort -- sort lines grep -i linux ./*of text files
+sort -n numbsers.txt -- sort by numbers
+cut -d ">" -f 3 datafile.txt -- splits lines by delimiter ">" and returns subtring by field number "3"
+
+left_command | right_command -- pipe, redirects output of left command to input of right_command. cut -d ">" -f 3 datafile.txt | sort
+
+grep -- print lines that match patterns, 
+	grep linux ./*
+	grep -i linux ./* 
+	grenp -E ".gov|.kgb" mydatafile.txt -- regular expression
+
+>> -- appends lines to file
+
+sort names.txt > names.txt -- creates or erase right names.txt file and then output stream of left command directs to this files.
+
+2> -- redirects error output.
+	grep denis /etc/* 2> errors.txt -- non error lines will be displayed, error lines will be stored in errors.txt
+	grep denis /etc/* 2> /dev/null -- error lines will be ignored
+	grep denis /etc/* > normal.txt 2> errors.txt -- good lines will be stored in normal.txt and bad lines will be stored in errors.txt
+	grep denis /etc/* &> output.txt -- good and error lines will be stored in output.txt
+
+
